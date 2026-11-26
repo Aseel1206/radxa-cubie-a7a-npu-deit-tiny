@@ -1,0 +1,27 @@
+{
+    "Inputs": {
+        "pixel_values_619_0": {
+            "name": "pixel_values_0",
+            "shape": [
+                1,
+                224,
+                224,
+                3
+            ],
+            "format": "nchw",
+            "dtype": "uint8"
+        }
+    },
+    "Outputs": {
+        "attach_logits/out0_0": {
+            "name": "attach_logits/out0",
+            "shape": [
+                1,
+                1000
+            ],
+            "format": "nchw",
+            "dtype": "float32"
+        }
+    },
+    "Recurrent_connections": {}
+}

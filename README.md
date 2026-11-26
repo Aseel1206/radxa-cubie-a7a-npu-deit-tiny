@@ -89,7 +89,7 @@ from cubie_npu import Model
 logits = Model("models/deit_tiny_int8pcq.nb")(rgb_224x224_uint8)     # 14.6 ms, float32 logits
 ```
 
-[`examples/classify.py` in cubie-npu](https://github.com/Aseel1206/cubie-npu/blob/main/examples/classify.py) is a complete script (it gives bit-identical results to `scripts/classify.py` here).
+[`examples/classify.py` in cubie-npu](https://github.com/Aseel1206/cubie-npu/blob/main/examples/classify.py) is a complete script (it gives the same results as `scripts/classify.py` here).
 
 ## More models on the Cubie A7A NPU
 

@@ -80,10 +80,22 @@ These are not specific to this model, so if you convert something else you will 
 
 DeiT: Touvron et al., [facebookresearch/deit](https://github.com/facebookresearch/deit) (Apache-2.0). ONNX export by Xenova.
 
+## Use it from Python
+
+There is now a pip-installable Python wrapper for the NPU, [cubie-npu](https://github.com/Aseel1206/cubie-npu) (not on PyPI yet, install it with `pip install git+https://github.com/Aseel1206/cubie-npu`). With it you can skip the C++ tools above:
+
+```python
+from cubie_npu import Model
+logits = Model("models/deit_tiny_int8pcq.nb")(rgb_224x224_uint8)     # 14.6 ms, float32 logits
+```
+
+[`examples/classify.py` in cubie-npu](https://github.com/Aseel1206/cubie-npu/blob/main/examples/classify.py) is a complete script (it gives bit-identical results to `scripts/classify.py` here).
+
 ## More models on the Cubie A7A NPU
 
 Same board, same toolchain, same kind of notes:
 
+- [cubie-npu](https://github.com/Aseel1206/cubie-npu): Python bindings for the NPU
 - [radxa-cubie-a7a-npu-mediapipe-hands](https://github.com/Aseel1206/radxa-cubie-a7a-npu-mediapipe-hands): MediaPipe palm detector + hand landmarks (int8, ~5 ms total)
 - [radxa-cubie-a7a-npu-blazeface](https://github.com/Aseel1206/radxa-cubie-a7a-npu-blazeface): MediaPipe BlazeFace face detector (~1 ms)
 - [radxa-cubie-a7a-npu-depth-anything-v2](https://github.com/Aseel1206/radxa-cubie-a7a-npu-depth-anything-v2): Depth Anything V2 small depth estimation (255 ms int8)

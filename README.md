@@ -82,7 +82,7 @@ DeiT: Touvron et al., [facebookresearch/deit](https://github.com/facebookresearc
 
 ## Use it from Python
 
-There is now a pip-installable Python wrapper for the NPU, [cubie-npu](https://github.com/Aseel1206/cubie-npu) (not on PyPI yet, install it with `pip install git+https://github.com/Aseel1206/cubie-npu`). With it you can skip the C++ tools above:
+There is now a pip-installable Python wrapper for the NPU, [cubie-npu](https://github.com/Aseel1206/cubie-npu) (`pip install cubie-npu`, [on PyPI](https://pypi.org/project/cubie-npu/)). With it you can skip the C++ tools above:
 
 ```python
 from cubie_npu import Model
